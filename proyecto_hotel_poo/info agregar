@@ -1,0 +1,29 @@
+Funcionalidades principales:
+Gestión de Huéspedes:
+
+✅ Registrar nuevos huéspedes
+📋 Listar todos los huéspedes
+🔍 Buscar huésped por documento
+
+Gestión de Habitaciones:
+
+📋 Listar todas las habitaciones
+🏨 Ver solo habitaciones disponibles
+🔄 Cambiar estado (Disponible/Ocupada/Mantenimiento)
+
+Gestión de Reservas:
+
+➕ Crear nuevas reservas (calcula automáticamente el costo)
+📋 Listar todas las reservas
+📅 Ver reservas activas del día
+❌ Cancelar reservas
+
+Características técnicas:
+
+Conexión segura a MySQL
+Manejo de errores
+Cálculo automático de costos según noches de estadía
+Consultas con JOIN para mostrar información completa
+Interfaz de consola clara y organizada
+Validación de datos
+
