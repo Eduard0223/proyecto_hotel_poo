@@ -1,0 +1,13 @@
+Requerimientos funcionales:
+Registrar huéspedes con datos de contacto.
+ Administrar habitaciones con tipo y precio.
+ Generar reservas con fecha de entrada y salida.
+ Calcular costo total de la reserva.
+Casos de uso:
+ Un huésped reserva una habitación doble por 5 noches.
+ Otro intenta reservar una habitación ya ocupada.
+Extensiones posibles:
+ Agregar servicios adicionales (comida, spa).
+ Generar factura al finalizar la estadía. 
+
+ 
