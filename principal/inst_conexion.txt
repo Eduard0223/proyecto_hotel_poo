@@ -1,0 +1,10 @@
+Crear la base de datos en MySQL/phpMyAdmin
+Abre phpMyAdmin (normalmente http://127.0.0.1/phpmyadmin).
+Crea una nueva base de datos, por ejemplo: hotel_db (o el nombre que prefieras).
+O desde MySQL CLI / consola:
+CREATE DATABASE hotel_db DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+
+Usa SQLAlchemy + PyMySQL:
+URL: mysql+pymysql://user:password@host:port/dbname
+(normalmente el usuario es root nomas)
