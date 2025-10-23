@@ -1,0 +1,40 @@
+-- --------------------------------------------------------
+-- ESTRUCTURA DE TABLA: huespedes
+-- --------------------------------------------------------
+CREATE TABLE `huespedes` (
+  `id_huesped` INT(11) NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(100) NOT NULL,
+  `apellido` VARCHAR(100) NOT NULL,
+  `rut` VARCHAR(12) NOT NULL UNIQUE,
+  `telefono` VARCHAR(20) DEFAULT NULL,
+  `correo` VARCHAR(150) DEFAULT NULL,
+  PRIMARY KEY (`id_huesped`)
+);
+
+-- --------------------------------------------------------
+-- ESTRUCTURA DE TABLA: habitaciones
+-- --------------------------------------------------------
+CREATE TABLE `habitaciones` (
+  `id_habitacion` INT(11) NOT NULL AUTO_INCREMENT,
+  `num_habitacion` VARCHAR(10) NOT NULL UNIQUE,
+  `tipo` VARCHAR(50) NOT NULL,
+  `precio_noche` DECIMAL(10, 2) NOT NULL,
+  `estado` VARCHAR(50) NOT NULL DEFAULT 'Disponible',
+  PRIMARY KEY (`id_habitacion`)
+);
+
+-- --------------------------------------------------------
+-- ESTRUCTURA DE TABLA: reservas
+-- --------------------------------------------------------
+CREATE TABLE `reservas` (
+  `id_reserva` INT(11) NOT NULL AUTO_INCREMENT,
+  `id_huesped` INT(11) NOT NULL,
+  `id_habitacion` INT(11) NOT NULL,
+  `fecha_entrada` DATE NOT NULL,
+  `fecha_salida` DATE NOT NULL,
+  `estado` VARCHAR(50) NOT NULL DEFAULT 'Confirmada',
+  `total` DECIMAL(10, 2) NOT NULL,
+  PRIMARY KEY (`id_reserva`),
+  FOREIGN KEY (`id_huesped`) REFERENCES `huespedes`(`id_huesped`),
+  FOREIGN KEY (`id_habitacion`) REFERENCES `habitaciones`(`id_habitacion`)
+);
